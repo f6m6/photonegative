@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+  
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var invertButton: UIButton!
+  let context = CIContext(options:nil)
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
+  @IBAction func invertButtonPressed(sender: UIButton) {
+    
+    let beginImage = CIImage(image: imageView.image!)
+    let filter = CIFilter(name: "CIColorInvert")!
+    filter.setValue(beginImage, forKey: kCIInputImageKey)
+    let filtered = filter.outputImage!
+    let bitmap = self.context.createCGImage(filtered, fromRect: filtered.extent)
+    imageView.image = UIImage(CGImage: bitmap)
+  }
 }
 
