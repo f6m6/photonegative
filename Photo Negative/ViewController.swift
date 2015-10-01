@@ -8,14 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,
+  UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
   
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var invertButton: UIButton!
+  
   let context = CIContext(options:nil)
+  
+  let picker = UIImagePickerController()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    picker.delegate = self
   }
   
   override func didReceiveMemoryWarning() {
@@ -31,5 +37,29 @@ class ViewController: UIViewController {
     let bitmap = self.context.createCGImage(filtered, fromRect: filtered.extent)
     imageView.image = UIImage(CGImage: bitmap)
   }
+  
+  
+  @IBAction func photoFromLibrary(sender: UIButton) {
+    picker.allowsEditing = false
+    picker.sourceType = .PhotoLibrary
+    presentViewController(picker, animated: true, completion: nil)
+  }
+  
+  
+  func imagePickerController(
+    picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [String : AnyObject])
+  {
+    let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage 
+    imageView.contentMode = .ScaleAspectFit
+    imageView.image = chosenImage
+    dismissViewControllerAnimated(true, completion: nil) //5
+  }
+  func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
 }
+
+// http://makeapppie.com/2014/12/04/swift-swift-using-the-uiimagepickercontroller-for-a-camera-and-photo-library/
 

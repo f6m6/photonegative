@@ -26,10 +26,20 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Invert the image"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="145" y="468" width="111" height="30"/>
+                                    <rect key="frame" x="145" y="440" width="111" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="invertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWE-wL-pBB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1An-A9-0bk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Library"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="510" width="48" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSA-8U-Avv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,12 +48,14 @@
                             <mask key="subviews">
                                 <exclude reference="J8I-j7-bds"/>
                                 <exclude reference="0uH-nz-fzx"/>
+                                <exclude reference="1An-A9-0bk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="J8I-j7-bds"/>
                                 <include reference="0uH-nz-fzx"/>
+                                <include reference="1An-A9-0bk"/>
                             </mask>
                         </variation>
                     </view>
@@ -65,6 +77,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ibd-4F-M8J"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ahn-H4-3MR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
