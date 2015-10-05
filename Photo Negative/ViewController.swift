@@ -59,6 +59,20 @@ UINavigationControllerDelegate {
     dismissViewControllerAnimated(true, completion: nil)
   }
   
+  @IBAction func invertBarButtonPressed(sender: UIBarButtonItem) {
+    
+    let beginImage = CIImage(image: imageView.image!)
+    let filter = CIFilter(name: "CIColorInvert")!
+    filter.setValue(beginImage, forKey: kCIInputImageKey)
+    let filtered = filter.outputImage!
+    let bitmap = self.context.createCGImage(filtered, fromRect: filtered.extent)
+    imageView.image = UIImage(CGImage: bitmap)
+  }
+  @IBAction func photoFromLibraryBar(sender: UIBarButtonItem) {
+    picker.allowsEditing = false
+    picker.sourceType = .PhotoLibrary
+    presentViewController(picker, animated: true, completion: nil)
+  }
 }
 
 // http://makeapppie.com/2014/12/04/swift-swift-using-the-uiimagepickercontroller-for-a-camera-and-photo-library/

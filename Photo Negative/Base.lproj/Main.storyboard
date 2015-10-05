@@ -16,6 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1An-A9-0bk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Library"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="446" width="48" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSA-8U-Avv"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sketch 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="J8I-j7-bds">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -32,33 +42,46 @@
                                     <action selector="invertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWE-wL-pBB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1An-A9-0bk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Library"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-1c-fT2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Choose image" id="NwE-Y9-ow6">
+                                        <connections>
+                                            <action selector="photoFromLibraryBar:" destination="BYZ-38-t0r" id="74t-fS-OTf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vHn-R2-8eF"/>
+                                    <barButtonItem title="Invert!" id="ePw-Fc-WSf">
+                                        <connections>
+                                            <action selector="invertBarButtonPressed:" destination="BYZ-38-t0r" id="DtW-aE-YkD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="510" width="48" height="30"/>
+                                    <rect key="frame" x="0.0" y="497" width="400" height="44"/>
                                 </variation>
-                                <connections>
-                                    <action selector="photoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSA-8U-Avv"/>
-                                </connections>
-                            </button>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="1An-A9-0bk"/>
                                 <exclude reference="J8I-j7-bds"/>
                                 <exclude reference="0uH-nz-fzx"/>
-                                <exclude reference="1An-A9-0bk"/>
+                                <exclude reference="Dgm-1c-fT2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="1An-A9-0bk"/>
                                 <include reference="J8I-j7-bds"/>
                                 <include reference="0uH-nz-fzx"/>
-                                <include reference="1An-A9-0bk"/>
+                                <include reference="Dgm-1c-fT2"/>
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="J8I-j7-bds" id="QSL-Z5-tKN"/>
                         <outlet property="invertButton" destination="0uH-nz-fzx" id="bIK-SR-Fhc"/>
@@ -67,23 +90,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="379.5" y="337"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="VsG-Bv-kbZ">
-            <objects>
-                <viewController id="aWa-ao-JTN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="O3F-CL-zIy"/>
-                        <viewControllerLayoutGuide type="bottom" id="ibd-4F-M8J"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ahn-H4-3MR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qno-J1-kV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
