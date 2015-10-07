@@ -13,6 +13,7 @@
 		D82C903B1BB9C01000F48640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82C903A1BB9C01000F48640 /* Assets.xcassets */; };
 		D82C903E1BB9C01000F48640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82C903C1BB9C01000F48640 /* LaunchScreen.storyboard */; };
 		D82C90461BB9CC8000F48640 /* sketch 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D82C90451BB9CC8000F48640 /* sketch 1.png */; settings = {ASSET_TAGS = (); }; };
+		D8DDE85F1BC5A3D200F4203B /* parkroyal.png in Resources */ = {isa = PBXBuildFile; fileRef = D8DDE85E1BC5A3D200F4203B /* parkroyal.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D82C903D1BB9C01000F48640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D82C903F1BB9C01000F48640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D82C90451BB9CC8000F48640 /* sketch 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sketch 1.png"; sourceTree = "<group>"; };
+		D8DDE85E1BC5A3D200F4203B /* parkroyal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkroyal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D82C90371BB9C01000F48640 /* Main.storyboard */,
 				D82C90451BB9CC8000F48640 /* sketch 1.png */,
 				D82C903A1BB9C01000F48640 /* Assets.xcassets */,
+				D8DDE85E1BC5A3D200F4203B /* parkroyal.png */,
 				D82C903C1BB9C01000F48640 /* LaunchScreen.storyboard */,
 				D82C903F1BB9C01000F48640 /* Info.plist */,
 			);
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82C903E1BB9C01000F48640 /* LaunchScreen.storyboard in Resources */,
+				D8DDE85F1BC5A3D200F4203B /* parkroyal.png in Resources */,
 				D82C903B1BB9C01000F48640 /* Assets.xcassets in Resources */,
 				D82C90461BB9CC8000F48640 /* sketch 1.png in Resources */,
 				D82C90391BB9C01000F48640 /* Main.storyboard in Resources */,
@@ -258,6 +262,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.farhanmannan.app.Photo-Negative";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -272,6 +277,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.farhanmannan.app.Photo-Negative";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -294,6 +300,7 @@
 				D82C90441BB9C01000F48640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

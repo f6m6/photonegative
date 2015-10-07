@@ -16,34 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1An-A9-0bk">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Library"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="446" width="48" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="photoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSA-8U-Avv"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sketch 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="J8I-j7-bds">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="54" y="43" width="240" height="312"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uH-nz-fzx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Invert the image"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="145" y="440" width="111" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="invertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWE-wL-pBB"/>
-                                </connections>
-                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgm-1c-fT2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="121" y="419" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Choose image" id="NwE-Y9-ow6">
                                         <connections>
@@ -58,25 +32,27 @@
                                     </barButtonItem>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="497" width="400" height="44"/>
+                                    <rect key="frame" x="0.0" y="512" width="380" height="44"/>
                                 </variation>
                             </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sketch 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="J8I-j7-bds">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="373"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-6" width="380" height="438"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="1An-A9-0bk"/>
-                                <exclude reference="J8I-j7-bds"/>
-                                <exclude reference="0uH-nz-fzx"/>
                                 <exclude reference="Dgm-1c-fT2"/>
+                                <exclude reference="J8I-j7-bds"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="1An-A9-0bk"/>
-                                <include reference="J8I-j7-bds"/>
-                                <include reference="0uH-nz-fzx"/>
                                 <include reference="Dgm-1c-fT2"/>
+                                <include reference="J8I-j7-bds"/>
                             </mask>
                         </variation>
                     </view>
@@ -84,12 +60,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="J8I-j7-bds" id="QSL-Z5-tKN"/>
-                        <outlet property="invertButton" destination="0uH-nz-fzx" id="bIK-SR-Fhc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379.5" y="337"/>
+            <point key="canvasLocation" x="379" y="337"/>
         </scene>
     </scenes>
     <resources>

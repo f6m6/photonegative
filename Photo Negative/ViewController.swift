@@ -71,7 +71,12 @@ UINavigationControllerDelegate {
   @IBAction func photoFromLibraryBar(sender: UIBarButtonItem) {
     picker.allowsEditing = false
     picker.sourceType = .PhotoLibrary
-    presentViewController(picker, animated: true, completion: nil)
+//    presentViewController(picker, animated: true, completion: nil)
+    picker.modalPresentationStyle = .Popover
+    presentViewController(picker,
+      animated: true, completion: nil)//4
+    picker.popoverPresentationController?.barButtonItem = sender
+
   }
 }
 
